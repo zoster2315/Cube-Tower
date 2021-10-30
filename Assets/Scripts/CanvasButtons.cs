@@ -40,4 +40,18 @@ public class CanvasButtons : MonoBehaviour
             GetComponent<Image>().sprite = musicOff;
         }
     }
+
+    public void LoadShop()
+    {
+        if (PlayerPrefs.GetString("music") != "Off")
+            GetComponent<AudioSource>().Play();
+        SceneManager.LoadScene("Shop");
+    }
+
+    public void CloseShop()
+    {
+        if (PlayerPrefs.GetString("music") != "Off")
+            GetComponent<AudioSource>().Play();
+        SceneManager.LoadScene("Main");
+    }
 }
